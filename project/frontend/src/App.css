@@ -1,0 +1,273 @@
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+.App-header {
+  background-color: #20232a;
+  height:5%;
+  padding: 20px;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.App-header h1 {
+  color: #d11717;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.chatbot-functions {
+  padding: 50px;
+  width: 95%;
+  height: 80vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80vh;
+  width: 20%;
+  background-color: white;
+  color:rgb(33,35,42);
+  padding-right: 50px;
+  overflow-y: auto;
+}
+
+.panel-text {
+  cursor:pointer;
+  text-align:center;
+  transition: color 0.3s ease;
+}
+
+.panel-text:hover {
+  color: #f00;
+  padding: 8px;
+  border: 2px solid #433F30;
+  border-radius: 10px;
+}
+
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-item:hover .delete-session-btn {
+  display: inline-block;
+}
+
+.delete-session-btn {
+  display: none;
+  cursor: pointer;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #d11717;
+  color: #F0EDE0;
+  border-radius: 20px;
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+.delete-session-btn:hover{
+  background-color: #433F30;
+}
+
+.new-message-btn {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #d11717; 
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+.new-message-btn:hover {
+  background-color:#433F30;
+}
+
+.chat-container {
+  width: 90%;
+  height: 80vh;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.messages-list {
+  flex: 1; 
+  overflow-y: auto;
+  margin-bottom: 20px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.message-form {
+  display: flex;
+  align-items: center;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.send-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #d11717;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.send-button:hover {
+  background-color:#433F30;
+}
+
+.centeredMessage {
+  position: fixed;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.prompts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 0.5vh;
+}
+
+.promptOption {
+  cursor: pointer;
+  padding: 12px;
+  border: 0.5px solid black;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.promptOption:hover {
+  background-color:#d11717;
+  color:#F0EDE0
+}
+
+.upload-pdf-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #d11717;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.upload-pdf-button:hover{
+  background-color:#433F30;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #d11717;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+}
+
+.file-input-label:hover {
+  background-color: #433F30;
+}
+
+.message-form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.message-input {
+  flex-grow: 1;
+  margin-right: 0;
+}
+
+.send-button, .file-input-label, .upload-pdf-button {
+  white-space: nowrap;
+}
+
+.uploaded-file-name {
+  text-align: right;
+}
+
+/* .upload-status {
+  text-align:right;
+  color: green; /* or any color you want for success messages */
+  /* margin-top: 10px; */
+  /* Any additional styles you want to add */
+/* } */ 
+
+.progress-bar {
+  width: 0%;
+  background-color: #4CAF50;
+  height: 20px;
+  transition: width 0.4s ease;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+
+.upload-status {
+  text-align: right;
+  color: #555; /* Default text color */
+  margin-top: 10px;
+}
+
+.success {
+  color: #28a745; /* Green for success */
+}
+
+.error {
+  color: #dc3545; /* Red for errors */
+}
+
+.icon {
+  margin-right: 5px;
+}

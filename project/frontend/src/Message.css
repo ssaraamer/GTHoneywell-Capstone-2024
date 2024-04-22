@@ -1,0 +1,19 @@
+.message {
+    width: fit-content;
+    max-width: 60%;
+    padding: 0px 10px;
+    margin: 4px;
+    border-radius: 20px;
+    line-height: 1.2;
+    color: white;
+  }
+  
+  .user-message {
+    background-color: #d11717;
+    align-self: flex-end;
+  }
+  
+  .chatgpt-message {
+    background-color: #6f6f6f;
+    align-self: flex-start;
+  }
